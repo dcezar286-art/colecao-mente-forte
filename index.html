@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coleção Manual da Vida Real – E-books por Daniel Cezar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Coleção de e-books sobre renda extra, ansiedade, foco, disciplina e vida financeira. Conteúdo direto ao ponto para organizar mente, rotina e dinheiro.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 16px 48px;
+    }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 4px 14px;
+    }
+    .nav-logo {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+    .nav-logo span {
+      color: #22c55e;
+    }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .nav-links a:hover { color: #e5e7eb; }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, #1d4ed8 0, #020617 45%, #020617 100%);
+      border-radius: 24px;
+      padding: 28px 18px 34px;
+      display: grid;
+      gap: 24px;
+    }
+    @media(min-width: 900px) {
+      .hero {
+        grid-template-columns: 1.5fr 1fr;
+        padding: 40px 40px 42px;
+      }
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #bfdbfe;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    @media(min-width: 900px){
+      .hero-title { font-size: 32px; }
+    }
+    .hero-sub {
+      font-size: 14px;
+      color: #cbd5f5;
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+    .hero-bullets {
+      font-size: 13px;
+      color: #cbd5f5;
+      margin-bottom: 18px;
+    }
+    .hero-bullets li { margin-left: 18px; margin-bottom: 4px; }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg,#22c55e,#16a34a);
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #022c22;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 14px 30px rgba(22,163,74,0.55);
+      white-space: nowrap;
+    }
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 9px 20px;
+      font-size: 12px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #e5e7eb;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .hero-guarantee {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .hero-covers {
+      background: rgba(15,23,42,0.9);
+      border-radius: 20px;
+      padding: 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 25px 45px rgba(15,23,42,0.9);
+    }
+    .hero-covers img {
+      max-width: 100%;
+      border-radius: 18px;
+      display: block;
+    }
+    .hero-covers-caption {
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    /* SECTION WRAPPERS */
+    .section {
+      margin-top: 34px;
+      background: #f8fafc;
+      color: #0f172a;
+      border-radius: 24px;
+      padding: 24px 18px 26px;
+    }
+    .section.dark {
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 24px;
+      padding: 26px 18px 30px;
+      border: 1px solid rgba(148,163,184,0.35);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+    .dark .section-sub { color: #9ca3af; }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media(min-width: 900px){
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    /* CARDS */
+    .card {
+      border-radius: 18px;
+      background: #ffffff;
+      color: #0f172a;
+      padding: 14px 14px 16px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .dark .card {
+      background: #020617;
+      color: #e5e7eb;
+      border-color: rgba(148,163,184,0.5);
+    }
+    .card-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #6b7280;
+    }
+    .dark .card-tag { color: #9ca3af; }
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .card-text {
+      font-size: 12px;
+      color: #4b5563;
+    }
+    .dark .card-text { color: #cbd5f5; }
+    .card-link {
+      font-size: 12px;
+      margin-top: 4px;
+      color: #2563eb;
+    }
+    .dark .card-link { color: #60a5fa; }
+
+    /* ARTICLES */
+    .article-section {
+      margin-top: 26px;
+      border-radius: 24px;
+      background: #020617;
+      border: 1px solid rgba(148,163,184,0.35);
+      padding: 22px 18px 24px;
+    }
+    .article-section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #e5e7eb;
+    }
+    .article-section h3 {
+      font-size: 14px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      color: #e5e7eb;
+    }
+    .article-section p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbd5f5;
+      margin-bottom: 6px;
+    }
+    .article-section ul {
+      margin: 6px 0 10px 18px;
+      font-size: 13px;
+      color: #cbd5f5;
+    }
+    .article-cta {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #22c55e;
+    }
+
+    .center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mt-12 { margin-top: 12px; }
+    .final-cta {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    @media(max-width: 600px){
+      .nav-links { display: none; }
+    }
+
+    /* CARDS DA ÁREA DO LEITOR */
+    .reader-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media(min-width: 900px){
+      .reader-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav-logo">DANIEL <span>CEZAR</span></div>
+      <nav class="nav-links">
+        <a href="#colecao">Coleção</a>
+        <a href="#artigos">Artigos</a>
+        <a href="#leitor">Área do leitor</a>
+        <a href="#combo">Combo</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div>
+        <div class="hero-tag">Coleção oficial • Vida real</div>
+        <h1 class="hero-title">Manual da Vida Real + 3 E-books Essenciais</h1>
+        <p class="hero-sub">
+          Uma coleção de 4 e-books modernos para organizar a mente, a rotina e o dinheiro.
+          Conteúdo direto ao ponto, visual profissional, versões clara e escura para ler
+          em qualquer tela.
+        </p>
+        <ul class="hero-bullets">
+          <li>30 ideias reais de renda extra para começar ainda hoje.</li>
+          <li>Técnicas para reduzir ansiedade e controlar a mente acelerada.</li>
+          <li>Rotina de foco para a vida real, não para robôs.</li>
+          <li>Manual completo unindo mente, rotina e finanças.</li>
+        </ul>
+
+        <div class="hero-cta-row" id="combo">
+          <!-- TROQUE # PELO LINK DO CHECKOUT DO COMBO (Hotmart/Kiwify) -->
+          <a href="#" class="btn-primary">
+            Garantir o combo completo
+          </a>
+          <!-- Leva para a área do leitor dentro do próprio site -->
+          <a href="#leitor" class="btn-secondary">
+            Acessar meus e-books
+          </a>
+        </div>
+        <p class="hero-guarantee">
+          Acesso imediato • Versões clara e escura • Leitura em qualquer dispositivo.
+        </p>
+      </div>
+
+      <div class="hero-covers">
+        <!-- Substitua por sua capa de combo -->
+        <img src="capa_combo.png" alt="Coleção de e-books por Daniel Cezar">
+        <p class="hero-covers-caption">
+          Capas oficiais da Coleção Manual da Vida Real.  
+          Você recebe os 4 títulos em tema claro e escuro.
+        </p>
+      </div>
+    </section>
+
+    <!-- COLEÇÃO -->
+    <section class="section" id="colecao">
+      <h2 class="section-title">O que você vai receber</h2>
+      <p class="section-sub">
+        São 4 e-books pensados para quem tem vida corrida e quer melhorar mente, rotina
+        e dinheiro de forma prática, sem enrolação.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-tag">E-book 1</div>
+          <div class="card-title">30 Ideias de Renda Extra</div>
+          <p class="card-text">
+            Guia prático com 30 ideias reais de renda extra, explicadas em linguagem simples
+            para você começar com o que já tem, sem precisar aparecer.
+          </p>
+          <a class="card-link" href="#artigo1">Ler artigo: renda extra sem aparecer</a>
+        </div>
+        <div class="card">
+          <div class="card-tag">E-book 2</div>
+          <div class="card-title">Ansiedade Zero</div>
+          <p class="card-text">
+            Técnicas simples de respiração, organização mental e rotina para reduzir a
+            ansiedade diária e recuperar o controle emocional.
+          </p>
+          <a class="card-link" href="#artigo2">Ler artigo: controlar ansiedade sozinho</a>
+        </div>
+        <div class="card">
+          <div class="card-tag">E-book 3</div>
+          <div class="card-title">Foco Máximo</div>
+          <p class="card-text">
+            Produtividade para a vida real: como focar mesmo cansado, vencer a
+            procrastinação e montar uma rotina possível, não perfeita.
+          </p>
+          <a class="card-link" href="#artigo3">Ler artigo: foco mesmo cansado</a>
+        </div>
+      </div>
+
+      <div class="grid mt-12">
+        <div class="card">
+          <div class="card-tag">E-book 4 • Principal</div>
+          <div class="card-title">Manual da Vida Real</div>
+          <p class="card-text">
+            O livro mais completo da coleção. Mente forte, rotina poderosa e dinheiro em
+            crescimento em um manual único, com dezenas de páginas aplicadas.
+          </p>
+          <a class="card-link" href="#artigo5">Ler artigo: vida financeira ganhando pouco</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREA DO LEITOR -->
+    <section class="section dark" id="leitor">
+      <h2 class="section-title">Área do leitor — Acesse seus e-books</h2>
+      <p class="section-sub">
+        Clique no título que deseja ler. Cada e-book está disponível em tema claro e escuro
+        para uma leitura confortável em qualquer dispositivo.
+      </p>
+
+      <div class="reader-grid">
+        <div class="card">
+          <div class="card-tag">E-book principal</div>
+          <div class="card-title">Manual da Vida Real</div>
+          <p class="card-text">Mente, rotina e dinheiro em um único manual prático.</p>
+          <a class="card-link" href="Manual da vida real Light.html" target="_blank">Ler em tema claro</a>
+          <a class="card-link" href="Manual da vida real Dark.html" target="_blank">Ler em tema escuro</a>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">E-book 1</div>
+          <div class="card-title">Ansiedade Zero</div>
+          <p class="card-text">Ferramentas simples para acalmar mente e corpo no dia a dia.</p>
+          <a class="card-link" href="ansiedade zero Light.html" target="_blank">Ler em tema claro</a>
+          <a class="card-link" href="ansiedade zero Dark.html" target="_blank">Ler em tema escuro</a>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">E-book 2</div>
+          <div class="card-title">Foco Produtividade</div>
+          <p class="card-text">Rotina de foco possível para quem vive cansado, mas quer avançar.</p>
+          <a class="card-link" href="Foco Produtividade Light.html" target="_blank">Ler em tema claro</a>
+          <a class="card-link" href="Foco Produtividade Dark.html" target="_blank">Ler em tema escuro</a>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">E-book 3</div>
+          <div class="card-title">Renda Extra</div>
+          <p class="card-text">Caminhos reais de renda extra para começar com o que você já sabe.</p>
+          <a class="card-link" href="Renda extra Light.html" target="_blank">Ler em tema claro</a>
+          <a class="card-link" href="Renda extra Dark.html" target="_blank">Ler em tema escuro</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PARTIR DAQUI continuam os ARTIGOS (SEO) exatamente como você já tinha -->
+    <!-- ... (pode colar todos os artigos 1 ao 12 aqui, iguais ao seu arquivo original) ... -->
+
+    <!-- CTA FINAL -->
+    <section class="section dark center">
+      <h2 class="section-title">Pronto para dar o próximo passo?</h2>
+      <p class="section-sub">
+        Você já leu conteúdo gratuito, já entende os temas. Agora é a hora de ter tudo
+        organizado em um material completo para consultar sempre que precisar.
+      </p>
+      <div class="mt-8">
+        <!-- TROCAR # PELO LINK DO COMBO PRINCIPAL NA KIWIFY -->
+        <a href="#" class="btn-primary">Quero a coleção completa</a>
+      </div>
+      <p class="mt-8" style="font-size:12px; color:#9ca3af;">
+        Pagamento único · Acesso imediato · E-books em tema claro e escuro · Conteúdo direto ao ponto.
+      </p>
+    </section>
+
+    <p class="final-cta">
+      Coleção Manual da Vida Real · Conteúdo e e-books por Daniel Cezar · Página criada para vendas automáticas via SEO
+    </p>
+  </div>
+</body>
+</html>
