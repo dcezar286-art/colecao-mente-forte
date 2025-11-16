@@ -10,9 +10,27 @@
   <meta name="description" content="Combo Manual da Vida Real: 4 e-books digitais sobre renda extra, ansiedade, foco e produtividade. Versões clara e escura, leitura perfeita no celular. Conteúdo direto ao ponto para organizar mente, rotina e dinheiro.">
   <meta name="keywords" content="combo manual da vida real, e-books desenvolvimento pessoal, renda extra, ansiedade, foco, produtividade, mente forte, Daniel Cezar, ebook em pdf, ebook para celular">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#020617">
 
   <!-- Canonical com URL real -->
   <link rel="canonical" href="https://dcezar286-art.github.io/colecao-mente-forte/">
+
+  <!-- Open Graph (para WhatsApp, Telegram etc.) -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Combo Manual da Vida Real – 4 E-books para Mente, Rotina e Dinheiro">
+  <meta property="og:description" content="Coleção com 4 e-books digitais sobre renda extra, ansiedade, foco e produtividade. Conteúdo direto ao ponto para quem tem vida corrida e quer resultado real.">
+  <meta property="og:url" content="https://dcezar286-art.github.io/colecao-mente-forte/">
+  <meta property="og:site_name" content="Combo Manual da Vida Real">
+  <meta property="og:image" content="https://dcezar286-art.github.io/colecao-mente-forte/capa_combo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Capa do Combo Manual da Vida Real por Daniel Cezar">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Combo Manual da Vida Real – 4 E-books Essenciais">
+  <meta name="twitter:description" content="E-books práticos sobre renda extra, ansiedade, foco e organização da vida real. Leitura em qualquer dispositivo.">
+  <meta name="twitter:image" content="https://dcezar286-art.github.io/colecao-mente-forte/capa_combo.png">
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -45,7 +63,7 @@
           "@type": "Offer",
           "url": "https://pay.kiwify.com.br/XNAmnQD",
           "priceCurrency": "BRL",
-          "price": "97.00",
+          "price": "39.90",
           "availability": "https://schema.org/InStock"
         }
       },
@@ -183,7 +201,7 @@
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .btn-primary {
       background: linear-gradient(90deg,#22c55e,#16a34a);
@@ -200,18 +218,18 @@
       box-shadow: 0 14px 30px rgba(22,163,74,0.55);
       white-space: nowrap;
     }
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 20px;
+    .hero-price {
       font-size: 12px;
-      border: 1px solid rgba(148,163,184,0.6);
-      color: #e5e7eb;
-      background: transparent;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      white-space: nowrap;
+      color: #bbf7d0;
+    }
+    .hero-price span.old {
+      text-decoration: line-through;
+      opacity: .7;
+      margin-right: 4px;
+    }
+    .hero-price span.new {
+      font-weight: 700;
+      color: #22c55e;
     }
     .hero-guarantee {
       font-size: 11px;
@@ -390,6 +408,21 @@
       margin-bottom: 3px;
       color: #e5e7eb;
     }
+
+    /* Prova social simples */
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+    .chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      color: #9ca3af;
+    }
   </style>
 </head>
 <body>
@@ -426,18 +459,20 @@
           </ul>
 
           <div class="hero-cta-row" id="combo">
-            <!-- Check-out do combo (Kiwify) -->
             <a href="https://pay.kiwify.com.br/XNAmnQD" class="btn-primary">
               Garantir o combo completo
             </a>
           </div>
+          <p class="hero-price">
+            <span class="old">R$ 97,00</span>
+            <span class="new">R$ 39,90</span> • acesso vitalício aos PDFs
+          </p>
           <p class="hero-guarantee">
             Acesso imediato • Versões clara e escura • Leitura em qualquer dispositivo.
           </p>
         </div>
 
         <div class="hero-covers">
-          <!-- Substitua por sua capa de combo -->
           <img src="capa_combo.png" alt="Capas dos 4 e-books do Combo Manual da Vida Real por Daniel Cezar">
           <p class="hero-covers-caption">
             Capas oficiais da Coleção Manual da Vida Real.  
@@ -497,6 +532,12 @@
             </p>
             <a class="card-link" href="#artigo5">Ler artigo: vida financeira ganhando pouco</a>
           </div>
+        </div>
+
+        <div class="chips-row">
+          <span class="chip">Leitura em até 15 minutos por dia</span>
+          <span class="chip">Ideal para CLT, estudantes e autônomos</span>
+          <span class="chip">Conteúdo direto, sem enrolação</span>
         </div>
       </section>
 
