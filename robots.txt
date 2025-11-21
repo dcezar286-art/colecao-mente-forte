@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/sitemap.xml
+Sitemap: https://dcezar286-art.github.io/colecao-mente-forte/sitemap-index.xml
