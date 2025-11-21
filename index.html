@@ -8,20 +8,26 @@
 
   <!-- SEO principal -->
   <meta name="description" content="Combo Manual da Vida Real: 4 e-books digitais sobre renda extra, ansiedade, foco e produtividade. Versões clara e escura, leitura perfeita no celular. Conteúdo direto ao ponto para organizar mente, rotina e dinheiro.">
-  <meta name="keywords" content="combo manual da vida real, e-books desenvolvimento pessoal, renda extra, ansiedade, foco, produtividade, mente forte, Daniel Cezar, ebook em pdf, ebook para celular">
+  <meta name="keywords" content="manual da vida real, combo de e-books, renda extra, ansiedade, foco, produtividade, desenvolvimento pessoal, mente forte, Daniel Cezar, ebook pdf, ebook para celular">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#020617">
 
-  <!-- Canonical com URL real -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://dcezar286-art.github.io/colecao-mente-forte/">
 
-  <!-- Open Graph (para WhatsApp, Telegram etc.) -->
+  <!-- SEO internacional: hreflang -->
+  <link rel="alternate" hreflang="pt-BR" href="https://dcezar286-art.github.io/colecao-mente-forte/">
+  <link rel="alternate" hreflang="en" href="https://dcezar286-art.github.io/colecao-mente-forte/en/">
+  <link rel="alternate" hreflang="es" href="https://dcezar286-art.github.io/colecao-mente-forte/es/">
+  <link rel="alternate" hreflang="x-default" href="https://dcezar286-art.github.io/colecao-mente-forte/">
+
+  <!-- Open Graph -->
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Combo Manual da Vida Real – 4 E-books para Mente, Rotina e Dinheiro">
   <meta property="og:description" content="Coleção com 4 e-books digitais sobre renda extra, ansiedade, foco e produtividade. Conteúdo direto ao ponto para quem tem vida corrida e quer resultado real.">
   <meta property="og:url" content="https://dcezar286-art.github.io/colecao-mente-forte/">
-  <meta property="og:site_name" content="Combo Manual da Vida Real">
+  <meta property="og:site_name" content="Manual da Vida Real">
   <meta property="og:image" content="https://dcezar286-art.github.io/colecao-mente-forte/capa_combo.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Capa do Combo Manual da Vida Real por Daniel Cezar">
@@ -35,14 +41,14 @@
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Dados estruturados: Site + Produto (Combo) + FAQ para Google -->
+  <!-- Dados estruturados: Product + FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "name": "Combo Manual da Vida Real",
+        "name": "Manual da Vida Real",
         "url": "https://dcezar286-art.github.io/colecao-mente-forte/",
         "description": "Página oficial do Combo Manual da Vida Real, coleção de 4 e-books digitais de desenvolvimento pessoal, ansiedade, foco e renda extra.",
         "publisher": {
@@ -137,16 +143,31 @@
       text-transform: uppercase;
       color: #e5e7eb;
     }
-    .nav-logo span {
-      color: #22c55e;
-    }
+    .nav-logo span { color: #22c55e; }
     .nav-links {
       display: flex;
       gap: 14px;
       font-size: 13px;
       color: #9ca3af;
+      align-items: center;
     }
     .nav-links a:hover { color: #e5e7eb; }
+    .lang-switch {
+      display: inline-flex;
+      gap: 6px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+    .lang-switch a {
+      opacity: .7;
+    }
+    .lang-switch span.current {
+      font-weight: 600;
+      opacity: 1;
+      color: #22c55e;
+    }
 
     /* HERO */
     .hero {
@@ -180,9 +201,7 @@
       font-weight: 700;
       margin-bottom: 10px;
     }
-    @media(min-width: 900px){
-      .hero-title { font-size: 32px; }
-    }
+    @media(min-width: 900px){ .hero-title { font-size: 32px; } }
     .hero-sub {
       font-size: 14px;
       color: #cbd5f5;
@@ -286,17 +305,14 @@
     }
     .dark .section-sub { color: #9ca3af; }
 
-    /* GRID */
     .grid {
       display: grid;
       gap: 16px;
     }
     @media(min-width: 900px){
       .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
-    /* CARDS */
     .card {
       border-radius: 18px;
       background: #ffffff;
@@ -335,7 +351,6 @@
     }
     .dark .card-link { color: #60a5fa; }
 
-    /* ARTICLES */
     .article-section {
       margin-top: 26px;
       border-radius: 24px;
@@ -382,34 +397,14 @@
     }
 
     @media(max-width: 600px){
-      .nav-links { display: none; }
+      .nav-links { gap: 8px; }
+      .nav-links a { display:none; }
     }
 
-    /* CARDS DA ÁREA DO LEITOR */
-    .reader-grid {
-      display: grid;
-      gap: 16px;
-    }
-    @media(min-width: 900px){
-      .reader-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+    .faq-list { margin-top: 12px; font-size: 13px; color: #cbd5f5; }
+    .faq-item { margin-bottom: 10px; }
+    .faq-item strong { display:block; margin-bottom:3px; color:#e5e7eb; }
 
-    /* FAQ */
-    .faq-list {
-      margin-top: 12px;
-      font-size: 13px;
-      color: #cbd5f5;
-    }
-    .faq-item {
-      margin-bottom: 10px;
-    }
-    .faq-item strong {
-      display: block;
-      margin-bottom: 3px;
-      color: #e5e7eb;
-    }
-
-    /* Prova social simples */
     .chips-row {
       display: flex;
       flex-wrap: wrap;
@@ -435,12 +430,16 @@
         <a href="#colecao">Coleção</a>
         <a href="#artigos">Artigos</a>
         <a href="#leitor">Área do leitor</a>
-        <a href="#combo">Combo</a>
+        <a href="#faq">FAQ</a>
+        <div class="lang-switch">
+          <span class="current">PT</span>
+          <a href="en/">EN</a>
+          <a href="es/">ES</a>
+        </div>
       </nav>
     </header>
 
     <main>
-
       <!-- HERO -->
       <section class="hero" id="topo">
         <div>
@@ -459,9 +458,7 @@
           </ul>
 
           <div class="hero-cta-row" id="combo">
-            <a href="https://pay.kiwify.com.br/XNAmnQD" class="btn-primary">
-              Garantir o combo completo
-            </a>
+            <a href="https://pay.kiwify.com.br/XNAmnQD" class="btn-primary">Garantir o combo completo</a>
           </div>
           <p class="hero-price">
             <span class="old">R$ 97,00</span>
@@ -498,7 +495,6 @@
               Guia prático com 30 ideias reais de renda extra, explicadas em linguagem simples
               para você começar com o que já tem, mesmo sem aparecer e sem ter audiência.
             </p>
-            <a class="card-link" href="#artigo1">Ler artigo: renda extra sem aparecer</a>
           </div>
           <div class="card">
             <div class="card-tag">E-book 2</div>
@@ -507,7 +503,6 @@
               Técnicas simples de respiração, organização mental e rotina para reduzir a
               ansiedade diária e recuperar o controle emocional, mesmo em dias cheios.
             </p>
-            <a class="card-link" href="#artigo2">Ler artigo: controlar ansiedade sozinho</a>
           </div>
           <div class="card">
             <div class="card-tag">E-book 3</div>
@@ -516,7 +511,6 @@
               Produtividade para a vida real: como focar mesmo cansado, vencer a
               procrastinação e montar uma rotina possível, não perfeita.
             </p>
-            <a class="card-link" href="#artigo3">Ler artigo: foco mesmo cansado</a>
           </div>
         </div>
 
@@ -526,81 +520,47 @@
             <div class="card-title">Manual da Vida Real</div>
             <p class="card-text">
               O livro mais completo da coleção. Mente forte, rotina poderosa e dinheiro em
-              crescimento em um manual único, com dezenas de páginas aplicadas, pensado
-              justamente para quem encontrou essa página pesquisando no Google e quer
-              mudar a própria realidade.
+              crescimento em um manual único, pensado para quem está decidido a mudar a própria realidade de forma prática.
             </p>
-            <a class="card-link" href="#artigo5">Ler artigo: vida financeira ganhando pouco</a>
           </div>
         </div>
 
         <div class="chips-row">
-          <span class="chip">Leitura em até 15 minutos por dia</span>
+          <span class="chip">Leitura em até 15 min por dia</span>
           <span class="chip">Ideal para CLT, estudantes e autônomos</span>
           <span class="chip">Conteúdo direto, sem enrolação</span>
         </div>
       </section>
 
-      <!-- ARTIGOS (SEO) -->
+      <!-- ARTIGOS (resumo SEO) -->
       <section class="article-section" id="artigos">
         <h2>Artigos gratuitos sobre renda extra, ansiedade, foco e rotina</h2>
         <p>
-          Abaixo você encontra textos que aprofundam os mesmos temas dos e-books. Eles ajudam o Google a entender
-          sobre o que é o Combo Manual da Vida Real e, ao mesmo tempo, já entregam valor pra você que chegou aqui
-          pesquisando soluções reais.
+          Estes textos resumem os principais temas do combo. Eles ajudam o Google a entender sobre o que é esta página
+          e, ao mesmo tempo, já entregam valor pra você que chegou aqui pesquisando soluções reais.
         </p>
 
         <article id="artigo1">
           <h3>Renda extra sem aparecer: como começar do zero em casa</h3>
           <p>
-            Se você procura “como fazer renda extra sem aparecer” no Google, provavelmente já está cansado de promessas
-            vazias. A ideia deste artigo é mostrar caminhos reais, que combinam com vida corrida, pouco tempo e zero
-            exposição.
-          </p>
-          <p>
-            No e-book <strong>30 Ideias de Renda Extra</strong> eu organizo passo a passo várias dessas ideias,
-            com exemplos práticos e sugestões de primeiros passos que você pode aplicar no mesmo dia.
-          </p>
-          <p class="article-cta">
-            Este artigo é um resumo. O conteúdo completo está dentro do Combo Manual da Vida Real.
+            Se você procura “como fazer renda extra sem aparecer” no Google, provavelmente já está cansado de promessas vazias.
+            A ideia é montar algo que encaixe na sua vida real, com pouco tempo e baixo risco.
           </p>
         </article>
 
         <article id="artigo2">
           <h3>Como controlar a ansiedade sozinho na vida real</h3>
           <p>
-            Ansiedade não se resolve só com frases prontas. Quem pesquisou “como controlar a ansiedade sozinho”
-            normalmente está sentindo o peso na rotina, no sono e no foco.
-          </p>
-          <p>
-            O e-book <strong>Ansiedade Zero</strong> traz técnicas simples, exercícios práticos e rotinas que cabem
-            na agenda de quem trabalha e estuda. A ideia é tirar o assunto do abstrato e levar para ações pequenas,
-            constantes e reais.
+            Ansiedade não se resolve só com frases motivacionais. No combo, você aprende exercícios simples,
+            rotinas de organização mental e formas práticas de reduzir o excesso de pensamento.
           </p>
         </article>
 
         <article id="artigo3">
           <h3>Como manter o foco mesmo cansado depois do trabalho</h3>
           <p>
-            Depois de um dia cheio, é normal estar cansado. Mas isso não significa que você nunca vai conseguir estudar,
-            empreender ou montar uma renda extra. O segredo está em criar um sistema mínimo de foco.
-          </p>
-          <p>
-            No e-book <strong>Foco Máximo</strong> eu mostro como usar blocos curtos de tempo, rituais de começo e fim
-            e técnicas simples para o cérebro entender que “agora é hora de concentrar”.
-          </p>
-        </article>
-
-        <article id="artigo5">
-          <h3>Como organizar a vida financeira mesmo ganhando pouco</h3>
-          <p>
-            Muita gente procura no Google como “sair do vermelho ganhando pouco”. O problema raramente é só o valor
-            que entra, mas também a forma como a mente enxerga prioridades, rotina e oportunidades.
-          </p>
-          <p>
-            O <strong>Manual da Vida Real</strong> junta mente, rotina e dinheiro em uma visão única, para você
-            conseguir montar um plano que caiba na sua realidade atual, e não em uma situação perfeita que ainda
-            não existe.
+            Depois de um dia cheio, é normal chegar em casa sem energia. O segredo não é força de vontade infinita,
+            e sim um sistema mínimo de foco, com rituais curtos e repetíveis.
           </p>
         </article>
       </section>
@@ -609,32 +569,39 @@
       <section class="section dark" id="leitor">
         <h2 class="section-title">Como usar os e-books na prática</h2>
         <p class="section-sub">
-          A ideia do Combo Manual da Vida Real não é te encher de teoria. É te dar um material que você consulta sempre
-          que precisar, como um manual mesmo. Você pode marcar páginas, voltar nos exercícios e montar sua própria linha
-          de ação para os próximos meses.
+          A ideia do Combo Manual da Vida Real é ser um material de consulta constante.
+          Você volta sempre que precisar ajustar mente, rotina ou dinheiro.
         </p>
 
-        <div class="reader-grid">
+        <div class="grid grid-3">
           <div class="card">
             <div class="card-tag">Passo 1</div>
-            <div class="card-title">Escolha o problema mais urgente</div>
+            <div class="card-title">Escolha o problema principal</div>
             <p class="card-text">
-              Comece pelo e-book que conversa com a sua dor principal hoje: dinheiro, ansiedade ou foco. Isso faz você
-              sentir resultado rápido e não abandonar no meio do caminho.
+              Comece pelo tema que está pegando mais hoje: dinheiro, ansiedade ou foco.
+              Isso faz você sentir resultado rápido.
             </p>
           </div>
           <div class="card">
             <div class="card-tag">Passo 2</div>
             <div class="card-title">Aplique uma ideia por vez</div>
             <p class="card-text">
-              Em vez de tentar mudar tudo em uma semana, escolha uma ideia de renda extra, um exercício de ansiedade
-              ou um ajuste de rotina por vez. Constância vence intensidade solta.
+              Em vez de tentar mudar tudo em uma semana, escolha uma ideia de renda extra
+              ou um exercício de ansiedade por vez.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Passo 3</div>
+            <div class="card-title">Reveja o manual todo mês</div>
+            <p class="card-text">
+              Separe um dia do mês para revisar o material, ajustar metas e ver como a sua vida real
+              está respondendo às mudanças.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ (visível e alinhado com o JSON-LD) -->
+      <!-- FAQ -->
       <section class="article-section" id="faq">
         <h2>Perguntas frequentes sobre o Combo Manual da Vida Real</h2>
         <div class="faq-list">
@@ -648,7 +615,7 @@
           </div>
           <div class="faq-item">
             <strong>Por quanto tempo tenho acesso ao material?</strong>
-            <span>O acesso é contínuo: você pode baixar os PDFs e guardar no seu celular, computador ou nuvem para consultar sempre que quiser.</span>
+            <span>Você pode baixar os PDFs e guardar no seu celular, computador ou nuvem para consultar sempre que quiser.</span>
           </div>
           <div class="faq-item">
             <strong>Preciso aparecer ou ter seguidores para aplicar as ideias?</strong>
@@ -673,9 +640,8 @@
       </section>
 
       <p class="final-cta">
-        Combo Manual da Vida Real · E-books e conteúdo por Daniel Cezar · Página focada em busca orgânica no Google (SEO)
+        Manual da Vida Real · E-books e conteúdo por Daniel Cezar · Página focada em busca orgânica global (SEO internacional)
       </p>
-
     </main>
   </div>
 </body>
